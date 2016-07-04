@@ -1,0 +1,8 @@
+# Site settings
+title: Object Orientation Intro
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jemoji

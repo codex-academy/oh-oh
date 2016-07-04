@@ -1,0 +1,34 @@
+<footer class="site-footer">
+  <nav class="main-nav" id="menu">
+    <ul>
+      <li>
+          <a href="{{ site.baseurl }}/pages/background.html" {% if page.url == "/pages/background.html" %}class = "active"{% endif %}>Introduction</a>
+      </li>
+      <li>
+          <a href="{{ site.baseurl }}/pages/light.html" {% if page.url == "/pages/light.html" %}class = "active"{% endif %}>A light on object orientation</a>
+          <ul>
+              <li>
+                  <a href="{{ site.baseurl }}/pages/light-css.html" {% if page.url == "/pages/light-css.html" %}class = "active"{% endif %}>A light</a>
+              </li>
+              <li>
+                  <a href="{{ site.baseurl }}/pages/light-nodebots.html" {% if page.url == "/pages/light-nodebots.html" %}class = "active"{% endif %}>A real light</a>
+              </li>
+          </ul>
+      </li>
+      <li>
+          <a href="{{ site.baseurl }}/pages/practical-examples.html" {% if page.url == "/pages/practical-examples.html" %}class = "active"{% endif %}>Practical examples</a>
+          <ul>
+              <li>
+                  <a href="{{ site.baseurl }}/pages/taxi.html" {% if page.url == "/pages/taxi.html" %}class = "active"{% endif %}>Taxi kata</a>
+              </li>
+              <li>
+                  <a href="{{ site.baseurl }}/pages/ferry.html" {% if page.url == "/pages/ferry.html" %}class = "active"{% endif %}>Ferry Kata</a>
+              </li>
+          </ul>
+      </li>
+      <li>
+          <a href="{{ site.baseurl }}/pages/apply-knowledge.html" {% if page.url == "/pages/apply-knowledge.html" %}class = "active"{% endif %}>Apply your knowledge</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
