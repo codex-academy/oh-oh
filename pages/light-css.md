@@ -19,4 +19,6 @@ They want to be able to use the Light Object like this:
 ```javascript
 var blueLight = new Light('lightOne', 'blue');
 
+document.querySelector('')
+
 ```
