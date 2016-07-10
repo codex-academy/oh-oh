@@ -40,6 +40,43 @@ Which allow you to instantiate various different Light instances like this:
     console.log(greenLight.color);
 ```
 
+## Classes vs Objects
+
+In Object Oriented programming a class is the template or blueprint for an Object. A class can be used to create multiple instances of the Class a Class instance is called an Object. Although each Object share the same behaviour, each one got it's own internal data (state) that is managed by the Object instance methods. In Javascript constructor functions are used as classes and are instantiated using the `new` keyword. In the previous section a `Light` constructor function is used. And then it's used to create to Object instances `orangeLight` and `greenLight`.
+
+## Class in the next version of Javascript
+
+The next version of Javascript (ES6/ES2015) support a `class` keyword that can be used to create classes.
+
+The syntax for creating a `Light` class in ES6 looks like this:
+
+```javascript
+
+'use strict';
+class Light{
+    constructor(color){
+        this.color = color;
+    }
+}
+```
+
+This approach clarifies the Object Orientated approach of using classes in Javascript a lot. It adds a explicit `constructor` function that is called when a new Object is instantiated.
+
+Using it stays the same as before:
+
+```javascript
+    //this now use the new Light class
+    var orangeLight = new Light('orange');
+    var greenLight = new Light('green');
+    //orange
+    console.log(orangeLight.color);
+    //green
+    console.log(greenLight.color);
+```
+
+Although under the hood it is still using the same approach as before. This es6 syntax for classes in Javascript, will work reliably in NodeJS version 4 and later. But to use this in a web browser you will need a Javascript preprocessor such as Babel.
+
+
 ## Member functions & attributes
 
 Objects have behaviour and data, our Light have two member functions which is `on` and `off`. If someone would like to use our `Light` object they would switch it on using the `on` member function. To switch it off they will be using the `off` member function.
@@ -106,7 +143,7 @@ console.log("The " + lightInstance.color + "light is currently " + lightInstance
 // will now print 'The blue light is currently on'
 ```
 
-When creating objects you need to decide what data is private and only visible in the Object, which data should be read-only and what data should be publicly accessible and changeable as a result. Objects can have private internal data and utility functions which is not accessible from outside the Class.
+When creating classes you need to decide what data is private and only visible in the Object, which data should be read-only and what data should be publicly accessible and changeable as a result. Objects can have private internal data and utility functions which is not accessible from outside the Class.
 
 ## Summary
 
