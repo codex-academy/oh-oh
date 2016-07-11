@@ -6,23 +6,15 @@ unitstandard:
 
 # Arduino and Breadboard Setup
 
-## The Domain
 
-Lights
-  * basic light
-  * blinking light
-    * using inheritance
-    * using composition
-  * light switch - that can switch both of the above lights on
 
 ## Breadboard setup
 
 Setup a breadboard that looks like this:
 
-![One LED](/pictures/SetupOneLED.jpg)
+![One LED](https://raw.githubusercontent.com/avermeulen/ObjectOrientationIntroduction/master/pictures/Setup%20for%20One%20LED_bb.jpg)
 
-
-Now create a file called blink.js and add this source code:
+You should use the [Pin class](https://github.com/rwaldron/johnny-five/wiki/Pin) from johnny-five to switch the light on or off. If a Pin is set to high the light will be switched off. If the Pin is set to low the light will be switched off.
 
 ```javascript
 
@@ -31,35 +23,15 @@ var board = new five.Board();
 
 board.on('ready', function(){
 
-		var pin = new five.Pin(9),
-            high = false;
+		var pin = new five.Pin(9);
 
-		setTimeout(function(){
-            if (!high){
-                pin.high();
-                high = true;
-            }
-            else{
-                pin.low();
-                high = false;
-            }
-		}, 1000);
+        // the light will switch on
+        pin.high();
+
+		// the light will switch off
+        pin.low()
 
 });
 ```
 
-Connect the Arduino to your PC and try to execute this code using nodejs.
-
-What happens?
-
-Now:
-
-* Create a ```Light``` object which can be switched on and off
-* Create a ```BlinkingLight``` object that can be switched on, off and can blink. One should be able to specify the blinking speed.
-* Create a ```LightSwitch``` object that can switch both the Light and the BlinkingLight on and off
-
-## Useful resources:
-
-* http://node-ardx.org/
-* http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
-* http://addyosmani.com/resources/essentialjsdesignpatterns/book/
+Connect the Arduino to your PC and try to execute this code using NodeJS.
