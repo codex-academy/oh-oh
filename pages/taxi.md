@@ -12,11 +12,13 @@ Now that you have a quite a solid understanding of Object Oriented programming w
 You are provided with these classes which you should use to make the taxi move.
 
 Taxi class:
+
 * `forward` - move taxi forward
 * `reverse` - move taxi backwards
 * `closestTrafficLight` - get the TrafficLight closest to the current location of the taxi
 
 TrafficLight class:
+
 * `makeRed` - make the traffic light red
 * `makeOrange` - make the traffic light orange
 * `makeGreen` - make the traffic light green
