@@ -22,4 +22,4 @@ As as Taxi Owner I would like to see who is driving my taxis, and on which route
 
 **Online shopping basket**
 
-TBC
+A friend of yours is selling sport gear online and wants to add an online store to his Web Site. He needs an online shopping basket, that users can add products too. Once users checkout the shopping basket should give the users a full list of products and the total price that is due. Upon checkout it should allow the user to enter their address and calculate a delivery cost for the user. Once the transactions is completed all the items in the basket should be removed.
