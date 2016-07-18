@@ -6,30 +6,38 @@ unitstandard:
 
 # Light
 
-We will explore the basic principles of Object Orientation using a `Light`.
+We will explore the basic principles of Object Orientation using a `Light` as an example.
 
 What are the attributes and behaviour of a light?
 
 For the purpose of our discussion a `Light`:
 
 * can be switched on and off;
-* and it can have a colour.
+* it can blink;
+* and it can have a color.
 
-## The constructor
+## Classes vs Objects
 
-The colour of a Light instance is specified when an instance is being created. The Object `constructor` is the function that is being called when a new instance of the `Light` class is instantiated. The constructor allows for different variables to be passed into the Class to create the resulting Object instance.
+In Object Oriented programming a class is a template or blueprint for an Object. A class can be used to create multiple instances of the Class, a Class instance is called an Object.
 
-In main stream Object Oriented programming languages classes will be created as a template from which Object instances are created. These object will have constructor functions that are being called when instances of the class is being instantiated. Javascript is using a concept called constructor functions, to simulate this pattern.
+Although each Object shares the same behaviour, each one got it's own internal data(state) that is managed by the Object instance methods. In Javascript `constructor functions` are used as classes and are instantiated using the `new` keyword.
 
-You can create a constructor function like this:
+## The object constructor
+
+Object Constructor allows for data to be passed into a Class to create a resulting Object instance. This enables the same class to be instantiated with different datasets. In Javascript a `constructor function` is acting as both the `class` and the `object constructor`. The constructor function takes in parameters and is executed at object instantiation time.
+
+## Applied
+
+Let's create a Light class for which you can specify the color. The color of a Light instance is specified when an instance is being created. The Object `constructor` is the function that is being called when a new instance of the `Light` class is instantiated as discussed.
+
+You can create a `constructor function` like this:
 
 ```javascript
 var Light = function(color){
     this.color = color;
 }
 ```
-
-Which allow you to instantiate various different Light instances like this:
+Now you can instantiate various Light instances like this:
 
 ```javascript
     var orangeLight = new Light('orange');
@@ -39,58 +47,25 @@ Which allow you to instantiate various different Light instances like this:
     //green
     console.log(greenLight.color);
 ```
-
-## Classes vs Objects
-
-In Object Oriented programming a class is the template or blueprint for an Object. A class can be used to create multiple instances of the Class a Class instance is called an Object. Although each Object share the same behaviour, each one got it's own internal data (state) that is managed by the Object instance methods. In Javascript constructor functions are used as classes and are instantiated using the `new` keyword. In the previous section a `Light` constructor function is used. And then it's used to create to Object instances `orangeLight` and `greenLight`.
-
-## Class in the next version of Javascript
-
-The next version of Javascript (ES6/ES2015) support a `class` keyword that can be used to create classes.
-
-The syntax for creating a `Light` class in ES6 looks like this:
-
-```javascript
-
-'use strict';
-class Light{
-    constructor(color){
-        this.color = color;
-    }
-}
-```
-
-This approach clarifies the Object Orientated approach of using classes in Javascript a lot. It adds a explicit `constructor` function that is called when a new Object is instantiated.
-
-Using it stays the same as before:
-
-```javascript
-    //this now use the new Light class
-    var orangeLight = new Light('orange');
-    var greenLight = new Light('green');
-    //orange
-    console.log(orangeLight.color);
-    //green
-    console.log(greenLight.color);
-```
-
-Although under the hood it is still using the same approach as before. This es6 syntax for classes in Javascript, will work reliably in NodeJS version 4 and later. But to use this in a web browser you will need a Javascript preprocessor such as Babel.
-
 
 ## Member functions & attributes
 
-Objects have behaviour and data, our Light have two member functions which is `on` and `off`. If someone would like to use our `Light` object they would switch it on using the `on` member function. To switch it off they will be using the `off` member function.
+Objects can have behaviour and data, our Light object should have to ability to be switched `on` and `off`. If someone would like to use our `Light` object they would switch it on using the `on` member function. To switch it off they will be using the `off` member function.
 
-Member functions can be attached to a constructor function(Class) like this:
+Member functions can be attached to a constructor function(Class) using the `this` keyword. The `this` keyword references the current instance of an object.
+
+Use it like this:
 
 ```javascript
 
 var Light = function(color){
     this.color = color;
     var status = 'off';
+    // create an `on` member function
     this.on = function(){
         status = 'on';
     }
+    // create an `off` member function
     this.off = function(){
         status = 'off';
     }
@@ -105,13 +80,28 @@ var greenLight = new Light('green');
 greenLight.on();
 ```
 
-Now one can switch a light on or off, but there are now way to see the status of the light as the `status` variable of the light is a private variable.
+One can switch a light on or off, but there are no way to see the status of the light. The `status` of the light is hidden and not visible from outside of the object, it is a `private variable`.
+
+This will not work:
+
+```javascript
+
+var greenLight = new Light('green');
+
+//switch on the green light
+greenLight.on();
+
+// this will not work!!!
+console.log(greenLight.status);
+```
 
 ## Private variables
 
-Information hiding is one of the central principles of Object Oriented programming. It allows one to encapsulate Object behaviour and actions into object member functions. This control how the state of an object is changed. For one to see the internal state of a object one can add member functions that can expose, but not change the internal state of and object.
+Information hiding is one of the principles of Object Oriented programming. It allows one to encapsulate Object behaviour and actions into object member functions. This allow control control how the state of an object is changed.
 
-We can expose the current state of a `Light` Object by adding a function like this:
+Internal state of a object one can be exposed using member functions which allow data to be exposed, but not changed.
+
+We can expose the current state of a `Light` Object by adding a member function:
 
 ```javascript
 //in the Light Class
@@ -145,6 +135,46 @@ console.log("The " + lightInstance.color + "light is currently " + lightInstance
 
 When creating classes you need to decide what data is private and only visible in the Object, which data should be read-only and what data should be publicly accessible and changeable as a result. Objects can have private internal data and utility functions which is not accessible from outside the Class.
 
+## Classes in the next version of Javascript
+
+The next version of Javascript (ES6/ES2015) support a `class` keyword that can be used to create classes.
+
+The syntax for creating a `Light` class in ES6 looks like this:
+
+```javascript
+
+'use strict';
+class Light{
+    constructor(color){
+        this.color = color;
+    }
+}
+```
+
+This approach clarifies the Object Orientated approach of using classes in Javascript. It adds a explicit `constructor` function that is called when a new Object is instantiated. Although under the hood it is still using the same approach as in es5.
+
+Using it stays the same as before:
+
+```javascript
+    //this now use the new Light class
+    var orangeLight = new Light('orange');
+    var greenLight = new Light('green');
+    //orange
+    console.log(orangeLight.color);
+    //green
+    console.log(greenLight.color);
+```
+
+This es6 syntax for classes in Javascript, is supported in NodeJS version 4 and later. To use this syntax in a web browser you will need a Javascript preprocessor such as Babel.
+
+## Object Composition
+
+The technique to use Objects to create a new Objects is called [Object Composition](https://en.wikipedia.org/wiki/Object_composition). It models the relationship between object using a `has a` type of relationship. The newly created object that is composed by using existing objects will use functionality from the already existing objects.
+
+You can use `Object Composition` to create a `TrafficLight` Object that is using the `Light` Objects. That way a TrafficLight object don't have to care how a Light is switched on or off, but it can rely on the fact that a light can be switched on and off.
+
 ## Summary
 
-So far we learned that Objects are created from Classes and a constructor function is the first function that is called on the Class and helps to initialises the data in the resulting Object instance. Objects can have member functions and attributes that gives an Objects it behaviour and state. Member functions and attributes can either be public of private. Public methods and attributes are accessible via Object instance variables. The internal state of Objects is only available inside of an Object. Some attributes can be exposed as read only and as a result can't be modified from outside of the Object.
+Objects are created by instantiating Classes and the object constructor is the first function that is called on the Class and helps to initialize the data in the resulting Object instance. Objects can have member functions and attributes that gives an Objects it behaviour and state. Member functions are public but attributes can either be public of private.
+
+Public methods and attributes are accessible via Object instance variables. The internal state of Objects is only available inside of an Object. Some attributes can be exposed as read only and as a result can't be modified from outside of the Object.
