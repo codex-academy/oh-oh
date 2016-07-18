@@ -6,6 +6,8 @@ unitstandard:
 
 # Apply knowledge
 
+Select one of the scenarios below and use Object Orientation to solve it. You should use TDD to test your objects.
+
 ## Scenario 1
 
 **Football tournament**
