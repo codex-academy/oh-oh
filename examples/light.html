@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="pages/light.css" media="screen" charset="utf-8">
+        <script type="text/javascript">
+
+            var Light = function(id, color) {
+
+                //get the target element to render the light into
+                var elem = document.getElementById(id);
+                elem.classList.add('light-background');
+
+                //append a div into the target element
+                var lightElem = document.createElement('div');
+                lightElem.classList.add('light');
+                lightElem.classList.add(color);
+                elem.appendChild(lightElem);
+
+                this.on = function(){
+                    lightElem.classList.add('on');
+                };
+
+                this.off = function(){
+                    lightElem.classList.remove('on');
+                };
+
+                this.toggle = function(){
+                    if (elem.classList.contains('on'))
+                        this.off();
+                    else
+                        this.on();
+                }
+
+            };
+
+        </script>
+    </head>
+    <body>
+
+        <div id="lightOne" >
+
+        </div>
+
+        <div id="lightTwo" >
+
+        </div>
+
+        <div id="lightThree" >
+
+        </div>
+
+
+
+
+
+    </body>
+    <script type="text/javascript">
+        var light1 = new Light('lightOne', 'green');
+        light1.on();
+    </script>
+</html>
