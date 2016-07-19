@@ -175,6 +175,4 @@ You can use `Object Composition` to create a `TrafficLight` Object that is using
 
 ## Summary
 
-Objects are created by instantiating Classes and the object constructor is the first function that is called on the Class and helps to initialize the data in the resulting Object instance. Objects can have member functions and attributes that gives an Objects it behaviour and state. Member functions are public but attributes can either be public of private.
-
-Public methods and attributes are accessible via Object instance variables. The internal state of Objects is only available inside of an Object. Some attributes can be exposed as read only and as a result can't be modified from outside of the Object.
+Objects are created by instantiating Classes, an object's constructor is the first function that is called on class instantiation. The constructor is place to initialize the data in the resulting Object instance. Objects can have member functions and attributes that is publicly available and gives an object some behaviour and state. Private functions and variables are only available inside of an object instance. Attributes can be exposed as read only and as a result can't be modified from outside of the Object.
