@@ -6,13 +6,13 @@ unitstandard:
 
 # A CSS Light
 
-Information hiding is one of benefits of Object Orientation programming. The users of Objects don't have to know how an Object is working internally to use it. As long as the Object do what is required, it can be used to solve tasks at hand.
+Information hiding is one of benefits of Object Orientation programming. The users of Objects don't have to know how an Object is working internally to use it. As long as the Object does what is required, it can be used to solve tasks at hand.
 
-For example say that a client comes to you and ask for an Object that can simulate a light on a web page.
+For example say a client comes to you and asks for an Object that cans simulate a light on a web page.
 
 Something like this:
 
-`I need a Light Class that I can use to create Light Objects that will create a Light on a web page. My team don't know CSS that well. The Light should be able to switched on or off when a button is pressed on a web page. And I want to specify the colour of the light to be created. I would like to be able to create multiple light on one web page`
+`I need a Light Class that I can use to create Light Objects that will create a Light on a web page. My team don't know CSS that well. The Light should be able to switched on or off when a button is pressed on a web page. I want to be able to specify the colour of the light. I would like to be able to create multiple light on a web page.`
 
 The client want to be able to use the Light Object like this:
 

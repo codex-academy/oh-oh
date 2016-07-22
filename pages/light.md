@@ -20,7 +20,7 @@ For the purpose of our discussion a `Light`:
 
 In Object Oriented programming a class is a template or blueprint for an Object. A class can be used to create multiple instances of the Class, a Class instance is called an Object.
 
-Although each Object shares the same behaviour, each one got it's own internal data(state) that is managed by the Object instance methods. In Javascript `constructor functions` are used as classes and are instantiated using the `new` keyword.
+Although each Object shares the same behaviour, each one got it's own internal state that is managed by the Objects instance methods. In Javascript `constructor functions` are used as classes and are instantiated using the `new` keyword.
 
 ## The object constructor
 
@@ -72,7 +72,7 @@ var Light = function(color){
 }
 ```
 
-Now one can switch a light on and off like this:
+Now you can switch a light on and off:
 
 ```javascript
 var greenLight = new Light('green');
@@ -80,7 +80,7 @@ var greenLight = new Light('green');
 greenLight.on();
 ```
 
-One can switch a light on or off, but there are no way to see the status of the light. The `status` of the light is hidden and not visible from outside of the object, it is a `private variable`.
+You can switch a light on or off, but there are no way to see the status of the light. The `status` of the light is hidden and not visible from outside of the object, it is a `private variable`.
 
 This will not work:
 
@@ -95,13 +95,15 @@ greenLight.on();
 console.log(greenLight.status);
 ```
 
-## Private variables
+## Information hiding & Encapsulation
 
-Information hiding is one of the principles of Object Oriented programming. It allows one to encapsulate Object behaviour and actions into object member functions. This allow control control how the state of an object is changed.
+Information hiding is one of the key principles of Object Oriented programming. By encapsulating object behaviour inside of member functions or private functions, an object internals stays hidden. Member functions expose behaviour to users of the object, but the details of how things are done is not exposed. This allows for implementation details of an object to stay hidden and as result member function can change without affecting code that is already using the Object. As result a codebase becomes easier to improve or extend. Good unit tests is essential though to ensure that internal object changes is not having some unintended consequences.
 
-Internal state of a object one can be exposed using member functions which allow data to be exposed, but not changed.
+Private variables hides an objects state inside of the object. This internal state of objects can be exposed a member functions which allow data to be exposed, but not changed.
 
-We can expose the current state of a `Light` Object by adding a member function:
+Read more about [Information Hiding and Encapsulation](https://en.wikipedia.org/wiki/Information_hiding).
+
+You can expose the current state of a `Light` Object by adding a member function:
 
 ```javascript
 //in the Light Class
@@ -111,7 +113,7 @@ this.status = function(){
 }
 ```
 
-Now one will be able to see the status of a `Light` Object like this:
+Now you will be able to see the status of a `Light` Object like this:
 
 ```javascript
 
@@ -123,9 +125,9 @@ console.log("The " + lightInstance.color + "light is currently " + lightInstance
 //this will print: 'The blue light is currently on'
 ```
 
-One thing to note is that the `colour` Light Class is currently a public instance variable that can be overridden once a Light instance.
+Note that the `colour` property on Light Class is a public instance variable that can be changed once a Light instance is instantiated.
 
-One can change the colour like this:
+Change the colour like this:
 
 ```javascript
 lightInstance.colour = 'orange';
@@ -133,7 +135,7 @@ console.log("The " + lightInstance.color + "light is currently " + lightInstance
 // will now print 'The blue light is currently on'
 ```
 
-When creating classes you need to decide what data is private and only visible in the Object, which data should be read-only and what data should be publicly accessible and changeable as a result. Objects can have private internal data and utility functions which is not accessible from outside the Class.
+When creating classes you need to decide what data is private and only visible inside the Object, which data should be read-only and what data should be publicly accessible and changeable. Objects can have private (internal) data and utility functions which is not accessible from outside the Class.
 
 ## Classes in the next version of Javascript
 
