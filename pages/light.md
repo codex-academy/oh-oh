@@ -10,7 +10,7 @@ We will explore the basic principles of Object Orientation using a `Light` as an
 
 What are the attributes and behaviour of a light?
 
-For the purpose of our discussion a `Light`:
+For our discussion a `Light`:
 
 * can be switched on and off;
 * it can blink;
@@ -97,7 +97,7 @@ console.log(greenLight.status);
 
 ## Information hiding & Encapsulation
 
-Information hiding is one of the key principles of Object Oriented programming. Encapsulation ensures that an objects internals stays hidden. Member functions expose the behaviour of the object, but the details of how things are done is not exposed. As the implementation details of an object is hidden member function can change internally. These internal changes can be done  without affecting code that is already using the Object. As result a code base becomes easier to improve or extend. Good unit tests is essential to ensure that changes does not having unintended consequences.
+Information hiding is one of the key principles of Object Oriented programming. Encapsulation makes sure that an objects internals stays hidden. Member functions expose the behaviour of the object, but the details of how things are done is not exposed. As the implementation details of an object is hidden member function can change internally. These internal changes can be done  without affecting code that is already using the Object. As result a code base becomes easier to improve or extend. Good unit tests is essential to make sure that changes does not having unintended consequences.
 
 Private variables hides an objects state inside of the object. Internal state of objects can be exposed using member functions which allow data to be exposed, but not changed.
 
@@ -135,16 +135,16 @@ console.log("The " + lightInstance.color + "light is currently " + lightInstance
 // will now print 'The blue light is currently on'
 ```
 
-When creating classes you need to decide: 
-  * What data is private inside the Object 
-  * Which data is read-only 
-  * What data should be publicly accessible and changeable. 
-  
+When creating classes you need to decide:
+  * What data is private inside the Object
+  * Which data is read-only
+  * What data should be publicly accessible and changeable.
+
 Objects can have private data and utility functions which is not accessible from outside the Class as well.
 
-## Classes in the next version of Javascript
+## Classes in the next version of JavaScript
 
-The next version of Javascript (ES6/ES2015) support a `class` keyword that can be used to create classes.
+The next version of JavaScript (ES6/ES2015) support a `class` keyword that can be used to create classes.
 
 The syntax for creating a `Light` class in ES6 looks like this:
 
@@ -158,7 +158,7 @@ class Light{
 }
 ```
 
-This approach clarifies the Object Orientated approach of using classes in Javascript. It adds a explicit `constructor` function that is called when a new Object is instantiated. Although under the hood it is still using the same approach as in es5.
+This approach clarifies the Object Orientated approach of using classes in JavaScript. It adds a explicit `constructor` function that is called when a new Object is instantiated. Although under the hood it is still using the same approach as in es5.
 
 Using it stays the same as before:
 
@@ -172,7 +172,7 @@ Using it stays the same as before:
     console.log(greenLight.color);
 ```
 
-This es6 syntax for classes in Javascript, is supported in NodeJS version 4 and later. To use this syntax in a web browser you will need a Javascript preprocessor such as Babel.
+This es6 syntax for classes in JavaScript, is supported in NodeJS version 4 and later. To use this syntax in a web browser you will need a JavaScript preprocessor such as Babel.
 
 ## Object Composition
 

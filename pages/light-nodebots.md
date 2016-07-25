@@ -6,7 +6,7 @@ unitstandard: 115363
 
 # A real light
 
-Next you will create Light class similar to the HTML/CSS Light you just created, but one that is controlling a real [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) light.
+Next you will create Light class like the HTML/CSS Light you created, but one that is controlling a real [LED](https://en.wikipedia.org/wiki/Light-emitting_diode) light.
 
 Your light class should have an `on`, `of` and `blink` member function. The constructor Light should take in the Arduino PIN number of the light to be switched on.
 
@@ -94,4 +94,3 @@ Add:
 * A `blink_fast` method to make the light blink fast
 * A `blink_slow` method to make the light blink slow
 * A `reset_count` function that set the `on_count` to 0
-

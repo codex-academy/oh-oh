@@ -64,7 +64,7 @@ var Light = function(id, color) {
 
 ```
 
-Be sure to reference the css file called [light.css](/pages/ligth.css) in your html. Create a div element called `light` inside the body tag.
+Be sure to reference the CSS file called [light.css](/pages/ligth.css) in your HTML. Create a div element called `light` inside the body tag.
 
 To create an instance of the Light use code like this:
 
@@ -76,7 +76,7 @@ var light = new Light('light', 'green');
 
 ```
 
-If all worked you should have a green light with a grey background. There is no way to switch the light on or off. But you should be able to change the color of the light to 'red' or 'orange' using the constructor.
+If all worked you should have a green light with a grey background. There's no way to switch the light on or off. But you should be able to change the color of the light to 'red' or 'orange' using the constructor.
 
 ## Add more behaviour to the constructor function
 
@@ -132,5 +132,3 @@ Now that you have a working Light class add a `blink` method which make the ligh
 ## Create a TrafficLight
 
 Now use your Light Object to create a `TrafficLight` class. It should have 3 lights and `stop`, `go` and `warning` methods which switch on the corresponding colored Light. It should also have a `blink` method which makes all three Lights blink every one second.
-
-
