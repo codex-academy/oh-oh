@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Index
-unitstandard:
+unitstandard: 115363
 ---
 
 # Light
@@ -135,11 +135,11 @@ console.log("The " + lightInstance.color + "light is currently " + lightInstance
 // will now print 'The blue light is currently on'
 ```
 
-When creating classes you need to decide:
-  * What data is private inside the Object
-  * Which data is read-only
-  * What data should be publicly accessible and changeable.
-
+When creating classes you need to decide: 
+  * What data is private inside the Object 
+  * Which data is read-only 
+  * What data should be publicly accessible and changeable. 
+  
 Objects can have private data and utility functions which is not accessible from outside the Class as well.
 
 ## Classes in the next version of Javascript
