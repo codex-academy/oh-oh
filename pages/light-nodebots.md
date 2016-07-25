@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Index
-unitstandard:
+unitstandard: 115363
 ---
 
 # A real light
@@ -12,7 +12,7 @@ Your light class should have an `on`, `of` and `blink` member function. The cons
 
 ## What you will use
 
-For this section you need to use an Arduino micro controller with the [johnny-five](http://http://johnny-five.io/) node module, this allow you to program hardware components using Javascript.
+For this section you will need an Arduino micro controller. Which you will use with the [johnny-five](http://http://johnny-five.io/) NodeJS module to program hardware components.
 
 ## Project setup
 
@@ -24,10 +24,6 @@ Do this:
 * `cd LedLightFun`
 * `npm init -y`
 * `npm install --save johnny-five`
-
-
-
-
 
 
 ## Setup the light
@@ -43,11 +39,11 @@ Set it up like this:
 
 ![Breadboard setup](https://raw.githubusercontent.com/avermeulen/ObjectOrientationIntroduction/master/pictures/Setup%20for%20One%20LED_bb.jpg)
 
-Connect your breadboard setup to your Arduino One to one of the numbered Pins on the board the othe to the GND pin.
+Connect your breadboard setup to your Arduino. One pin to one of the numbered Pins on the board the other to the GND pin.
 
 ## Try some code
 
-You should use the [Pin class](https://github.com/rwaldron/johnny-five/wiki/Pin) from johnny-five to switch the light on or off. If a Pin is set to high the light will be switched off. If the Pin is set to low the light will be switched off.
+You should use the [Pin class](https://github.com/rwaldron/johnny-five/wiki/Pin) from johnny-five to switch the light on or off. If a Pin is set to high the light will switch on. If the Pin is set to low the light will switch off.
 
 Run this code:
 
@@ -72,20 +68,16 @@ board.on('ready', function(){
 });
 ```
 
-## Create a Object
+## Create a class
 
 Once the above example is working. Create your own `LedLight` class to make the LED light switch on, off or blink.
 
 You should be able to use the light like this:
 
 ```javascript
-
 	var light = new LedLight(7);
-
 	light.on();
-
 	light.off();
-
 	light.blink();
 ```
 
@@ -102,3 +94,4 @@ Add:
 * A `blink_fast` method to make the light blink fast
 * A `blink_slow` method to make the light blink slow
 * A `reset_count` function that set the `on_count` to 0
+
