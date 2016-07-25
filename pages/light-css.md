@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Index
-unitstandard:
+unitstandard: 115363
 ---
 
 # A CSS Light
 
-Information hiding is one of benefits of Object Orientation programming. The users of Objects don't have to know how an Object is working internally to use it. As long as the Object does what is required, it can be used to solve tasks at hand.
+Information hiding is one of benefits of Object Orientation programming. The users of Objects don't have to know how an Object is working internally to use it. As long as the Object does what is required, it can be used.
 
-For example say a client comes to you and asks for an Object that cans simulate a light on a web page.
+Let's say a client comes to you and asks for an Object that can simulate a light on a web page.
 
 Something like this:
 
@@ -43,7 +43,7 @@ offBtn.addEventListener('click', function(){
 
 You will start of by creating a `Light` constructor function, that locate the target element and create a round 'light' inside of it that.
 
-In a file called `light.html` in a script tag below the body tag add this code:
+In a file called `light.html` in a `script` tag below the body tag add this code:
 
 ```javascript
 
@@ -61,6 +61,7 @@ var Light = function(id, color) {
 
 
 }
+
 ```
 
 Be sure to reference the css file called [light.css](/pages/ligth.css) in your html. Create a div element called `light` inside the body tag.
@@ -75,7 +76,7 @@ var light = new Light('light', 'green');
 
 ```
 
-If all worked you should have a green light with a grey background. Currently there is no way to switch the light on or off. But you should be able to change the color of the light to 'red' or 'orange'.
+If all worked you should have a green light with a grey background. There is no way to switch the light on or off. But you should be able to change the color of the light to 'red' or 'orange' using the constructor.
 
 ## Add more behaviour to the constructor function
 
@@ -131,3 +132,5 @@ Now that you have a working Light class add a `blink` method which make the ligh
 ## Create a TrafficLight
 
 Now use your Light Object to create a `TrafficLight` class. It should have 3 lights and `stop`, `go` and `warning` methods which switch on the corresponding colored Light. It should also have a `blink` method which makes all three Lights blink every one second.
+
+
