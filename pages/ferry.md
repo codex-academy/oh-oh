@@ -12,7 +12,7 @@ Solve this exercise using TDD. Complete it in JavaScript, Python, or Ruby. Once 
 
 A ferry is a boat that carries people and things for a short distance between two places - typically between islands and over rivers.
 
-![Ferry](/img/ferry.jpg)
+![Ferry](https://raw.githubusercontent.com/codex-academy/oh-oh/gh-pages/img/ferry.jpg)
 [The Bolivar Gridge Ferry](https://en.wikipedia.org/wiki/Bolivar_Bridge)
 
 
