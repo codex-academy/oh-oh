@@ -18,14 +18,6 @@ For this section you will need an Arduino micro controller. Which you will use w
 
 In your projects folder create a new folder called `LedLightFun`. Change into that folder set it up as a NodeJS project folder and install the `johnny-five` module.
 
-Do this:
-
-* `mkdir LedLightFun`
-* `cd LedLightFun`
-* `npm init -y`
-* `npm install --save johnny-five`
-
-
 ## Setup the light
 
 You will need:
