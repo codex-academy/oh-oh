@@ -5,11 +5,9 @@ unitstandard: 115363-SO3-AC1 115363-SO3-AC2 115363-SO3-AC3
 ---
 # Make the taxi move.
 
-Now that you have a quite a solid understanding of Object Oriented programming we will give you a bit of a challenge. You are provided with a few classes that you should use to make a little minibus taxi move. The taxi should not be able to move forward if the TrafficLight is green. When the taxi reach the end of the road it should wrap around to the start of the Road. If the up and down arrow is pressed the TrafficLight closest to the taxi should toggle between green, orange & red. The taxi should only be able to move forward if the light is green.
+Now that you have a good understanding of Object Oriented programming we will give you a challenge. You are provided with classes that you should use to make a little minibus taxi move. The taxi should not be able to move forward if the TrafficLight closest to it is red. When the taxi reaches the end of the road it should wrap around to the start of the road. If the up or down arrow is pressed the TrafficLight closest to the taxi should toggle between green, orange, and red. The taxi should be able to move forward if the light is green.
 
-## Class provided:
-
-You are provided with these classes which you should use to make the taxi move.
+You are provided with classes which you should use to make the taxi move. Here are details of each class and it's members functions.
 
 Taxi class:
 
@@ -26,7 +24,7 @@ TrafficLight class:
 
 Keypress class:
 
-Each function take a function that is called when the corresponding key is pressed.
+Each function takes a function that is called when the corresponding key is pressed.
 
 * `forward` - when the right arrow key is pressed
 * `reverse` - when the left arrow key is pressed
