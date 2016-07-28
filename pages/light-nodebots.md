@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Index
-unitstandard:
+unitstandard: 115363-SO1-AC2  115363-SO2-AC1 115363-SO2-AC2 115363-SO2-AC3
 ---
 
 # A real light
@@ -24,11 +24,6 @@ Do this:
 * `cd LedLightFun`
 * `npm init -y`
 * `npm install --save johnny-five`
-
-
-
-
-
 
 ## Setup the light
 

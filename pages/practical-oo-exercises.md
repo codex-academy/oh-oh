@@ -1,11 +1,9 @@
 ---
 layout: default
 title: Index
-unitstandard:
+unitstandard: 115363-SO3-AC1 115363-SO3-AC2 115363-SO3-AC3
 ---
 
-# Practical Object Oriented exercises
+# Learn about Object Oriented programming
 
-[exercise 1](./pages/light-css.html)
-
-[exercise 2](./pages/light-nodebots.html)
+Use the [CSS Light](/pages/light-css.html) and [Real Light](/pages/ferry.html) exercises to learn more about Object Orientation programming.
