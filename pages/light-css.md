@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Index
-unitstandard: 115363
+unitstandard: 115363-SO1-AC1, 115363-SO1-AC2
 ---
 
 # A CSS Light
@@ -12,7 +12,7 @@ Let's say a client comes to you and asks for an Object that can simulate a light
 
 Something like this:
 
-> "I need a Light Class that I can use to create Light Objects that will create a Light on a web page. My team doesn't know CSS that well. The Light should be able to switched on or off when a button is pressed on a web page. I want to be able to specify the colour of the light. I would like to be able to create multiple lights on a page."
+`I need a Light Class that I can use to create Light Objects that will create a Light on a web page. My team don't know CSS that well. The Light should be able to switched on, off or blink when a button is pressed on a web page. I want to be able to specify the colour of the light. I would like to be able to create multiple light on a web page.`
 
 The client wants to be able to use the Light Object like this:
 
