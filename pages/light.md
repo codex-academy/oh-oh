@@ -14,7 +14,7 @@ For our discussion a `Light` can:
 
 * be switched on and off;
 * blink;
-* have a colour.
+* have a color.
 
 ## Classes vs Objects
 
@@ -59,13 +59,13 @@ console.log(instanceTwo.instanceMethod());
 
 ## Practical example
 
-Let's create a `Light` Class for which you can specify the colour. The colour of a `Light` instance is specified when an instance is being created. The **Object constructor** is the constructor function that is being called when a new instance of the `Light` class is instantiated using the `new` keyword.
+Let's create a `Light` Class for which you can specify the color. The color of a `Light` instance is specified when an instance is being created. The **Object constructor** is the constructor function that is being called when a new instance of the `Light` class is instantiated using the `new` keyword.
 
 You can create a **constructor function** like this:
 
 ```javascript
-var Light = function(colour){
-    this.colour = colour;
+var Light = function(color){
+    this.color = color;
 }
 ```
 Now you can instantiate Light instances like this:
@@ -74,9 +74,9 @@ Now you can instantiate Light instances like this:
     var orangeLight = new Light('orange');
     var greenLight = new Light('green');
     // orange
-    console.log(orangeLight.colour);
+    console.log(orangeLight.color);
     // green
-    console.log(greenLight.colour);
+    console.log(greenLight.color);
 ```
 
 ## Summary

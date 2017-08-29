@@ -12,7 +12,7 @@ Let's say a client comes to you and asks for an Object that can simulate a light
 
 Something like this:
 
-`I need a Light Class that I can use to create Light Objects that will create a Light on a web page. My team don't know CSS that well. The Light should be able to switched on, off or blink when a button is pressed on a web page. I want to be able to specify the colour of the light. I would like to be able to create multiple light on a web page.`
+`I need a Light Class that I can use to create Light Objects that will create a Light on a web page. My team don't know CSS that well. The Light should be able to switched on, off or blink when a button is pressed on a web page. I want to be able to specify the color of the light. I would like to be able to create multiple light on a web page.`
 
 The client wants to be able to use the Light Object like this:
 
@@ -46,7 +46,7 @@ You will start of by creating a `Light` constructor function, that locates the t
 In a file called `light.html` in a `script` tag below the body tag add this code:
 
 ```javascript
-var Light = function(id, colour) {
+var Light = function(id, color) {
 
     //get the target element to render the light into
     var elem = document.getElementById(id);
@@ -55,7 +55,7 @@ var Light = function(id, colour) {
     //append a div into the target element
     var lightElem = document.createElement('div');
     lightElem.classList.add('light');
-    lightElem.classList.add(colour);
+    lightElem.classList.add(color);
     elem.appendChild(lightElem);
 
 
@@ -67,13 +67,13 @@ Be sure to reference the CSS file called [light.css](/pages/light.css) in your H
 To create an instance of the Light use code like this:
 
 ```javascript
-// Valid colours for the light are red, green, orange. You can add more colours by adding classes in the css file
+// Valid colors for the light are red, green, orange. You can add more colors by adding classes in the css file
 
 var light = new Light('light', 'green');
 
 ```
 
-If all worked you should have a green light with a grey background. There's no way to switch the light on or off. But you should be able to change the colour of the light to 'red' or 'orange' using the constructor.
+If all worked you should have a green light with a grey background. There's no way to switch the light on or off. But you should be able to change the color of the light to 'red' or 'orange' using the constructor.
 
 ## Add more behaviour to the constructor function
 
@@ -102,7 +102,7 @@ var light = new Light('light', 'green');
 light.on();
 ```
 
-After switching the light on, the colour in the circle should be much brighter than before.
+After switching the light on, the color in the circle should be much brighter than before.
 
 Now go ahead and add an `off` method to the Light by using this code:
 
@@ -126,4 +126,4 @@ Now that you have a working Light class add a `blink` method which makes the lig
 
 ## Create a TrafficLight
 
-Now use your Light Object to create a `TrafficLight` class. It should have 3 lights and `stop`, `go`, and `warning` methods which switch on the corresponding coloured Light. It should also have a `blink` method which makes all three Lights blink every one second.
+Now use your Light Object to create a `TrafficLight` class. It should have 3 lights and `stop`, `go`, and `warning` methods which switch on the corresponding colored Light. It should also have a `blink` method which makes all three Lights blink every one second.
