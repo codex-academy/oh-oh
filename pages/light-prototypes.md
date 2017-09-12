@@ -100,6 +100,47 @@ console.log(light.state);
 
 > **Note:** ES6 classes can't have private variables as they are just a sugar coated Prototype chain. Go figure!
 
+## ES6 Classes
+
+In ES6 you can now creates a class like this:
+
+```javascript
+
+class Light {
+
+    constructor(color){
+        this.color = color;
+        this.state = "off";
+    }
+
+    on(){
+        //this is no longer a Light instance variable
+        state = 'on';
+    }
+
+    off(){
+        //this is no longer a Light instance variable
+        state = 'off';
+    }
+
+    status(){
+        return "This is a " + this.color + " light and it is currently " + state;
+    }
+};
+
+```
+
+This works exactly the same as a Prototype chain and can be used like this:
+
+```javascript
+var light = new Light("green");
+light.on();
+//the state variable is NOT private
+console.log(light.state);
+//this is a member function
+console.log(light.status());
+```
+
 ## Why bother?!
 
 You might wonder why would one use the Prototype chain in JavaScript. It is useful for Inheritance in JavaScript, inheritance is when Objects can get behaviour from other objects without implementing it themselves. Hold onto that thought for later.
