@@ -115,16 +115,16 @@ class Light {
 
     on(){
         //this is no longer a Light instance variable
-        state = 'on';
+        this.state = 'on';
     }
 
     off(){
         //this is no longer a Light instance variable
-        state = 'off';
+        this.state = 'off';
     }
 
     status(){
-        return "This is a " + this.color + " light and it is currently " + state;
+        return "This is a " + this.color + " light and it is currently " + this.state;
     }
 };
 
