@@ -7,9 +7,9 @@ unitstandard: 115363-SO3-AC1 115363-SO3-AC2 115363-SO3-AC3
 
 Now that you have a good understanding of Object Oriented programming we will give you a challenge. You are provided with classes that you should use to make a little minibus taxi move. The taxi should not be able to move forward if the TrafficLight closest to it is red. When the taxi reaches the end of the road it should wrap around to the start of the road. If the up or down arrow is pressed the TrafficLight closest to the taxi should toggle between green, orange, and red. The taxi should be able to move forward if the light is green.
 
-See the taxi: https://codex-academy.github.io/objective-taxi/
+See the taxi [here](https://codex-academy.github.io/objective-taxi/). It can't move yet!
 
-Find the code here: https://github.com/codex-academy/objective-taxi
+Find the code [here](https://github.com/codex-academy/objective-taxi)
 
 You are provided with classes which you should use to make the taxi move. Here are details of each class and it's members functions.
 
